@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spring Concepts</title>
+    <style>
+        body{
+            font-family: Arial;
+            margin:20px;
+        }
+
+        .topic{
+            margin-bottom:50px;
+            padding:20px;
+            border:1px solid #ddd;
+            border-radius:10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Spring Framework Concepts</h1>
+
+<div id="beanLifecycle" class="topic"></div>
+<div id="dependencyInjection" class="topic"></div>
+<div id="beanScopes" class="topic"></div>
+<div id="aop" class="topic"></div>
+
+<script>
+async function loadContent(id, file) {
+    const response = await fetch(file);
+    const html = await response.text();
+    document.getElementById(id).innerHTML = html;
+}
+
+loadContent("beanLifecycle", "test.html");
+loadContent("dependencyInjection", "test2.html");
+loadContent("beanScopes", "bean-scopes.html");
+loadContent("aop", "aop.html");
+</script>
+
+</body>
+</html>

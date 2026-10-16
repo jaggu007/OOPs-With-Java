@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spring Bean Lifecycle</title>
+
+<style>
+    body {
+        background-color: #000;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 30px;
+    }
+
+    .container {
+        max-width: 1400px;
+        margin: auto;
+        border: 1px solid #222;
+        border-radius: 20px;
+        padding: 40px 20px;
+    }
+
+    .step {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .box {
+        background: linear-gradient(to right, #333, #3a3a3a);
+        border: 1px solid #4a4a4a;
+        border-radius: 12px;
+        padding: 28px;
+        margin: 10px auto;
+        width: 92%;
+    }
+
+    .highlight {
+        background: #dfe9df;
+        color: #222;
+        border: none;
+    }
+
+    .title {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+        color: #d0d0d0;
+    }
+
+    .highlight .subtitle {
+        color: #555;
+    }
+
+    .arrow {
+        font-size: 64px;
+        line-height: 1;
+        color: #ddd;
+        margin: 12px auto;
+        text-align: center;
+        display: block;
+        width: 100%;
+        transform: translateY(0);
+    }
+
+    .top-step,
+    .bottom-step {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .top-step .title,
+    .bottom-step .title {
+        font-size: 30px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Step 1 -->
+    <div class="top-step">
+        <div class="title">1. Bean instantiation</div>
+        <div class="subtitle">Spring creates the object</div>
+    </div>
+<!-- make the arrows in the middle of the boxes and make them bigger -->
+    <div class="arrow">↓</div>
+
+    <!-- Step 2 -->
+    <div class="box">
+        <div class="title">2. Dependency injection</div>
+        <div class="subtitle">
+            Properties and references are supplied
+        </div>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <!-- Step 3 -->
+    <div class="box">
+        <div class="title">3. Initialization callbacks</div>
+        <div class="subtitle">
+            For example, @PostConstruct or init-method
+        </div>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <!-- Step 4 -->
+    <div class="box highlight">
+        <div class="title">4. Bean ready for use</div>
+        <div class="subtitle">
+            Application invokes bean methods
+        </div>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <!-- Step 5 -->
+    <div class="bottom-step">
+        <div class="title">
+            5. Container shutdown and destruction callbacks
+        </div>
+        <div class="subtitle">
+            For applicable managed beans and scopes
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

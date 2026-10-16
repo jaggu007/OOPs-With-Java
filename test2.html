@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spring Learning Roadmap</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body{
+        background:#f4f4f4;
+        padding:30px;
+        color:#1f1f1f;
+    }
+
+    .roadmap{
+        max-width:1400px;
+        margin:auto;
+        background:#f8f8f8;
+        border:1px solid #d9d9d9;
+        border-radius:24px;
+        overflow:hidden;
+    }
+
+    .phase{
+        display:flex;
+        gap:22px;
+        padding:28px 30px;
+        align-items:flex-start;
+        border-bottom:1px solid #e2e2e2;
+    }
+
+    .phase:last-child{
+        border-bottom:none;
+    }
+
+    .icon-box{
+        width:80px;
+        height:80px;
+        border-radius:16px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:34px;
+        flex-shrink:0;
+    }
+
+    .blue{
+        background:#dfe5ef;
+        color:#37558c;
+    }
+
+    .green{
+        background:#e1e8e1;
+        color:#55785c;
+    }
+
+    .orange{
+        background:#eee4d5;
+        color:#96672f;
+    }
+
+    .purple{
+        background:#e4ddee;
+        color:#6d4b98;
+    }
+
+    .phase-content{
+        flex:1;
+    }
+
+    .phase-title{
+        font-size:22px;
+        font-weight:700;
+        margin-bottom:12px;
+    }
+
+    .phase-flow{
+        font-size:18px;
+        color:#676767;
+        margin-bottom:18px;
+    }
+
+    .phase-desc{
+        font-size:20px;
+        line-height:1.5;
+        color:#222;
+    }
+</style>
+</head>
+<body>
+
+<div class="roadmap">
+
+    <!-- Phase 1 -->
+    <div class="phase">
+        <div class="icon-box blue">
+            📖
+        </div>
+
+        <div class="phase-content">
+            <div class="phase-title">
+                Phase 1 — Foundations
+            </div>
+
+            <div class="phase-flow">
+                Spring Core basics → IoC → DI
+            </div>
+
+            <div class="phase-desc">
+                Establish why Spring exists and how it manages dependencies.
+            </div>
+        </div>
+    </div>
+
+    <!-- Phase 2 -->
+    <div class="phase">
+        <div class="icon-box green">
+            📦
+        </div>
+
+        <div class="phase-content">
+            <div class="phase-title">
+                Phase 2 — Bean Management
+            </div>
+
+            <div class="phase-flow">
+                Beans → configuration → injection → autowiring
+            </div>
+
+            <div class="phase-desc">
+                Build a working application using Spring's container.
+            </div>
+        </div>
+    </div>
+
+    <!-- Phase 3 -->
+    <div class="phase">
+        <div class="icon-box orange">
+            ⚙️
+        </div>
+
+        <div class="phase-content">
+            <div class="phase-title">
+                Phase 3 — Bean Behavior
+            </div>
+
+            <div class="phase-flow">
+                Scopes → annotations → lifecycle callbacks
+            </div>
+
+            <div class="phase-desc">
+                Understand object creation, reuse, initialization, and destruction.
+            </div>
+        </div>
+    </div>
+
+    <!-- Phase 4 -->
+    <div class="phase">
+        <div class="icon-box purple">
+            🗂️
+        </div>
+
+        <div class="phase-content">
+            <div class="phase-title">
+                Phase 4 — Advanced Spring Core
+            </div>
+
+            <div class="phase-flow">
+                AOP → integrated application → practical assessment
+            </div>
+
+            <div class="phase-desc">
+                Apply Spring to a realistic application and introduce cross-cutting concerns.
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
